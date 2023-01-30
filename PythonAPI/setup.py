@@ -4,7 +4,7 @@ from setuptools import dist, setup, Extension
 install_requires = [
     'setuptools>=18.0',
     'cython>=0.27.3',
-    'numpy>=1.16.2,<=1.19'
+    'numpy>=1.16.2'
 ]
 
 dist.Distribution().fetch_build_eggs(install_requires)
@@ -34,7 +34,7 @@ setup(
     extras_require={
         'all': ['matplotlib>=2.1.0']
     },
-    version='2.6.2',
+    version='2.6.3',
     ext_modules=ext_modules,
     python_requires='>=3.6',
 )
