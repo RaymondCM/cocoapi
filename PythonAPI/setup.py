@@ -1,12 +1,12 @@
 from setuptools import setup, Extension, find_packages
 import numpy as np
 
-# Define the C extension
+# Define the C extension (setup to only install from PyPI/git branch)
 ext_modules = [
     Extension(
         "rays_pycocotools._mask",
-        sources=["../common/maskApi.c", "rays_pycocotools/_mask.pyx"],
-        include_dirs=[np.get_include(), "../common"],
+        sources=["./common/maskApi.c", "rays_pycocotools/_mask.pyx"],
+        include_dirs=[np.get_include(), "./common"],
         extra_compile_args=["-Wno-cpp", "-Wno-unused-function", "-std=c99"],
     )
 ]
