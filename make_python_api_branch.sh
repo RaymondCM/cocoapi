@@ -7,7 +7,8 @@ git checkout --orphan python-api
 find . -maxdepth 1 \! -regex  '.*\(PythonAPI\|common\|\.\|\.\.\|\.git\)$' | xargs rm -r
 mv PythonAPI/* .
 rm -r PythonAPI
-sed -i 's/..\/common/common/g' setup.py
+#no longer needed since it doens't work from local install
+#sed -i 's/..\/common/common/g' setup.py
 git add .
 git commit -m "Cleaned master and pushed python-api branch"
 git push origin python-api -f
