@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 cd "$(cd -P -- "$(dirname -- "$0")" && pwd -P)"
 
-git clone https://github.com/RaymondKirk/cocoapi tmp_cocoapi
+git clone https://github.com/RaymondCM/cocoapi tmp_cocoapi
 cd tmp_cocoapi
 git checkout --orphan python-api
 find . -maxdepth 1 \! -regex  '.*\(PythonAPI\|common\|\.\|\.\.\|\.git\)$' | xargs rm -r
